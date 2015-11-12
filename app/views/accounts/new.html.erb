@@ -1,0 +1,34 @@
+<h1 style="margin-left: 100px">
+  账号注册
+  </h1>
+<%= form_for :account, :url =>{:controller => 'accounts', :action => 'create'} do |f| %>
+    <% if @account.errors.any? %>
+        <div id="error_explanation" style="margin-left: 100px">
+          <h2><%= pluralize(@account.errors.count, "error") %> happened when
+            this account being saved:</h2>
+          <ul>
+            <% @account.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+      <p style="margin-left: 100px">
+      <%= f.label :usernamelabel, "用户名"%><br>
+  <br>
+      <%= f.text_field :username%>
+    </p>
+     <div style="margin-left: 100px">
+      <p >
+      <%= f.label :passwordlabel, "密码" %><br>
+  <br>
+      <%= f.text_field :password%>
+    </p >
+  </div>
+    <p style = "margin-left: 140px; " >
+    <%= f.submit "注册" %>
+    </p>
+
+
+<% end %>

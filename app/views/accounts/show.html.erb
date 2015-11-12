@@ -1,0 +1,19 @@
+<h1>
+  注册结果
+  </h1>
+
+<p>
+  <strong>Username:</strong>
+  <%= @account.username %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @account.password %>
+</p>
+
+<p>
+  <div>
+    <%= link_to 'Login', :controller => 'login', :action => 'login'  %>
+  </div>
+  </p>

@@ -1,0 +1,26 @@
+
+<h1 style="margin-left: 100px">
+  账号登录
+</h1>
+<%= form_for :account, :url =>{:controller => 'login', :action => 'validate'} do |f| %>
+      <p style="margin-left: 100px">
+      <%= f.label :usernamelabel, "用户名"%><br>
+      <%= f.text_field :username%>
+    </p>
+     
+      <p style="margin-left: 100px">
+      <%= f.label :passwordlabel, "密码" %><br>
+      <%= f.text_field :password%>
+    </p>
+
+    <table style="margin-left: 160px">
+      <tr>
+        <td>
+          <div style="margin-right :20px">
+            <%= f.submit "登录" %>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+<% end %>
